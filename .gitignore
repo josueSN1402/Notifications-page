@@ -15,8 +15,9 @@
 .DS_Store
 .prettierignore
 
-src/design/*.jpg
+design/*.jpg
 src/assets/fonts
+notes.md
 
 README-template.md
 

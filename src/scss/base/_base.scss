@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: $white;
-    font-family: $font-primary;
+    background-color: var(--white);
+    font-family: var(--font-primary);
     font-size: 1.6rem;
 }
