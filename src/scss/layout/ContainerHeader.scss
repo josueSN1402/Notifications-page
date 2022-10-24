@@ -1,0 +1,29 @@
+.ContainerHeader {
+    margin-bottom: 35px;
+}
+
+.ContainerTitle {
+    gap: 11px;
+    align-items: center;
+}
+
+.Title {
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--very-dark-blue);
+    margin: 0;
+}
+
+.MarkNotifications {
+    font-weight: 400;
+    letter-spacing: 0.005rem;
+    border: none;
+    background-color: transparent;
+    color: var(--dark-grayish-blue);
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: var(--very-dark-blue);
+    }
+}
