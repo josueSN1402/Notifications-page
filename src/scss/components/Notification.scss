@@ -21,6 +21,11 @@ $black: #000000;
     &.WithPicture {        
         grid-template-columns: auto 1fr auto;
     }
+
+    @media screen and (max-width: 1600px) {
+        padding: 10px 14px;
+        column-gap: 14px;
+    }
 }
 
 .AvatarUser {
@@ -76,6 +81,7 @@ $black: #000000;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     font-weight: 300;
+    line-height: 1.35;
 
     &:hover {
         background-color: var(--light-grayish-blue-1);

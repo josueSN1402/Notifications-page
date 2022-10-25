@@ -1,5 +1,9 @@
 .ContainerHeader {
     margin-bottom: 35px;
+
+    @media screen and (max-width: 1400px) {
+        margin-bottom: 25px;
+    }
 }
 
 .ContainerTitle {
@@ -12,6 +16,10 @@
     font-size: 2.4rem;
     color: var(--very-dark-blue);
     margin: 0;
+
+    @media screen and (max-width: 1400px) {
+        font-size: 2rem;
+    }
 }
 
 .MarkNotifications {
@@ -25,5 +33,9 @@
 
     &:hover {
         color: var(--very-dark-blue);
+    }
+
+    @media screen and (max-width: 1400px) {
+        font-size: 1.3rem;
     }
 }

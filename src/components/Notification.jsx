@@ -75,9 +75,9 @@ function Notification({ userNotification, typeDate }) {
             </div>
             {userNotification.type === 'Picture' 
                 &&
-                    (<div className='NotificationPicture'>
+                    (<a href='/' className='NotificationPicture'>
                         <img src={userNotification.picture} alt="Posted image" />
-                    </div>)
+                    </a>)
             }
         </div>
     );

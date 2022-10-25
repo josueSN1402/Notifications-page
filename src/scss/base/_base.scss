@@ -7,6 +7,14 @@ body {
     background-color: var(--white);
     font-family: var(--font-primary);
     font-size: 1.6rem;
+
+    @media screen and (max-width: 1600px) {
+        font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: 1400px) {
+        font-size: 1.2rem;
+    }
 }
 
 p {
