@@ -26,6 +26,19 @@
 .NotificationContent {
     font-weight: 700;
     letter-spacing: 0.002rem;
+    line-height: 1.5;
+
+    a {
+        color: #000000;
+    
+        &:hover {
+            color: var(--blue);
+        }
+    }
+
+    .GroupName {
+        color: var(--blue);
+    }
 }
 
 .NotificationDescription {

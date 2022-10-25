@@ -1,9 +1,9 @@
 import '../scss/components/NotificationsCount.scss';
 
-function NotificationsCount() {
+function NotificationsCount({ count }) {
     return (
         <div className='NotificationsCount d-grd'>
-            <span id='Count'>3</span>
+            <span id='Count'>{count}</span>
         </div>
     );
 }
