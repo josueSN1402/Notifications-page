@@ -2,6 +2,10 @@
     width: 100%;
     min-height: 100vh;
     place-items: center;
+
+    @media screen and (max-width: 600px) {
+        place-items: unset;
+    }
 }
 
 .NotificationsContainer {
@@ -24,5 +28,13 @@
     @media screen and (max-width: 1400px) {
         width: 550px;
         min-height: 450px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        box-shadow: none;
+        padding: 25px 16px;
     }
 }
