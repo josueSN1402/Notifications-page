@@ -1,4 +1,5 @@
 import { Users } from './Users';
+import PublishedPhoto from '../assets/images/image-chess.webp'
 
 const notificationType = {
     d: 'Default',
@@ -43,6 +44,18 @@ class MessageNotification {
 	}
 }
 
+class PictureNotification {
+	constructor(name, avatar, picture, elapsed, read = false, description, type=notificationType.p) {
+		this.type = type;
+		this.name = name;
+		this.avatar = avatar;
+		this.picture = picture;
+		this.elapsed = elapsed;
+		this.read = read;
+		this.description = description;
+	}
+}
+
 const UsersNotification = [
 	new DefaultNotification(
 		Users[0].name,
@@ -72,10 +85,10 @@ const UsersNotification = [
 		5,
 		true
 	),
-	new SecondNotification(
-		notificationType.p,
+	new PictureNotification(
 		Users[4].name,
 		Users[4].avatar,
+		PublishedPhoto,
 		1,
 		true
 	),

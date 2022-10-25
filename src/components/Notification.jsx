@@ -24,7 +24,7 @@ function Notification({ userNotification, typeDate }) {
     }
 
     return (
-        <div className={`Notification d-flx${!userNotification.read ? ' Notification-Unread' : ''}`}>
+        <div className={`Notification${userNotification.type==='Picture' ? ' WithPicture':''} d-grd${!userNotification.read ? ' Notification-Unread' : ''}`}>
             <div className='AvatarContainer'>
                 <img
                     src={userNotification.avatar}
@@ -67,12 +67,18 @@ function Notification({ userNotification, typeDate }) {
                 </div>
                 { userNotification.type === 'Message' &&
                     <a href="/">
-                        <div className='NotificationMessage' >
+                        <div className='NotificationMessage'>
                                 <p>{userNotification.message}</p>
                         </div>
                     </a>
                 }
             </div>
+            {userNotification.type === 'Picture' 
+                &&
+                    (<div className='NotificationPicture'>
+                        <img src={userNotification.picture} alt="Posted image" />
+                    </div>)
+            }
         </div>
     );
 }
