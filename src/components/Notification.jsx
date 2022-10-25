@@ -65,6 +65,13 @@ function Notification({ userNotification, typeDate }) {
                         <span id='TypeDate'>{timeUnit}</span> ago
                     </p>
                 </div>
+                { userNotification.type === 'Message' &&
+                    <a href="/">
+                        <div className='NotificationMessage' >
+                                <p>{userNotification.message}</p>
+                        </div>
+                    </a>
+                }
             </div>
         </div>
     );

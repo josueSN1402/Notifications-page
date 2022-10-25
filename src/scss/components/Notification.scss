@@ -1,5 +1,7 @@
+$black: #000000;
+
 .Notification {
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 17px;
     gap: 19.5px;
     box-shadow: 0px 0px 2px 1px hsla(0, 0%, 67%, 0.15);
@@ -27,9 +29,10 @@
     font-weight: 700;
     letter-spacing: 0.002rem;
     line-height: 1.5;
+    align-items: flex-start;
 
     a {
-        color: #000000;
+        color: $black;
     
         &:hover {
             color: var(--blue);
@@ -56,4 +59,18 @@
 .NotificationElapsedTime {
     color: var(--dark-grayish-blue);
     font-weight: 300;
+}
+
+.NotificationMessage {
+    color: $black;
+    padding: 20px;
+    margin: 8px 0 2px;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    font-weight: 300;
+
+    &:hover {
+        background-color: var(--light-grayish-blue-1);
+    }
 }
