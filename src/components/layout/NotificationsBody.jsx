@@ -1,6 +1,6 @@
 import '../../scss/layout/NotificationsBody.scss';
 import { Notification } from '../Notification';
-import UserMark from '../../assets/images/avatar-mark-webber.webp';
+import { Users } from '../Users';
 
 function NotificationsBody() {
     const typeDates = {
@@ -23,67 +23,65 @@ function NotificationsBody() {
         <div className='Notifications d-flx f-column'>
             <Notification
                 type={notificationType.d}
-                name='Mark Webber'
-                avatar={UserMark}
+                name={Users[0].name}
+                avatar={Users[0].avatar}
                 description='reacted to your recent post'
                 theme='My first tournament today!'
                 read={false}
                 elapsed={1}
-                typeDate={typeDates.m}
             />
             <Notification
                 type={notificationType.f}
-                name='Angela Gray'
-                avatar={UserMark}
+                name={Users[1].name}
+                avatar={Users[1].avatar}
                 read={false}
                 elapsed={1}
-                typeDate={typeDates.m}
             />
             <Notification
                 type={notificationType.g}
-                name='Jacob Thompson'
-                avatar={UserMark}
+                name={Users[2].name}
+                avatar={Users[2].avatar}
                 description='has joined tour group'
                 theme='Chess Club'
                 read={false}
                 elapsed={1}
-                typeDate={typeDates.d}
+                typeDate='d'
             />
             <Notification
                 type={notificationType.m}
-                name='Rizky Hasanuddin'
-                avatar={UserMark}
+                name={Users[3].name}
+                avatar={Users[3].avatar}
                 read={true}
                 elapsed={5}
-                typeDate={typeDates.ds}
+                typeDate='d'
             />
             <Notification
                 type={notificationType.p}
-                name='Kimberly Smith'
-                avatar={UserMark}
+                name={Users[4].name}
+                avatar={Users[4].avatar}
                 read={true}
                 elapsed={1}
-                typeDate={typeDates.w}
+                typeDate='w'
             />
             <Notification
                 type={notificationType.d}
-                name='Nathan Peterson'
-                avatar={UserMark}
+                name={Users[5].name}
+                avatar={Users[5].avatar}
                 description='reacted to your recent post'
                 theme='5 end-game strategies to increase your win rate'
                 read={true}
                 elapsed={2}
-                typeDate={typeDates.ws}
+                typeDate='w'
             />
             <Notification
                 type={notificationType.g}
-                name='Anna Kim'
-                avatar={UserMark}
+                name={Users[6].name}
+                avatar={Users[6].avatar}
                 description='left the group'
                 theme='Chess Club'
                 read={true}
                 elapsed={2}
-                typeDate={typeDates.ws}
+                typeDate='w'
             />
         </div>
     );

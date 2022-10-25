@@ -1,6 +1,28 @@
 import '../scss/components/Notification.scss';
 
 function Notification(props) {
+    let timeUnit;
+
+    if (props.elapsed > 1) {
+        if (props.typeDate === 'd') {
+            timeUnit = ' days';
+        }
+        else if (props.typeDate === 'w') {
+            timeUnit = ' weeks';
+        } else {
+            timeUnit = 'm';
+        }
+    } else {
+        if (props.typeDate === 'd') {
+            timeUnit = ' day';
+        }
+        else if (props.typeDate === 'w') {
+            timeUnit = ' week';
+        } else {
+            timeUnit = 'm';
+        }
+    }
+
     return (
         <div className={`Notification d-flx${!props.read ? ' Notification-Unread' : ''}`}>
             <div className='AvatarContainer'>
@@ -40,7 +62,7 @@ function Notification(props) {
                 <div className='NotificationElapsedTime'>
                     <p>
                         <span id='Elapsed'>{props.elapsed}</span>
-                        <span id='TypeDate'>{props.typeDate}</span> ago
+                        <span id='TypeDate'>{timeUnit}</span> ago
                     </p>
                 </div>
             </div>
