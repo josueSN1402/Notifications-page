@@ -1,22 +1,22 @@
 import '../scss/components/Notification.scss';
 
-function Notification(props) {
+function Notification({ userNotification, typeDate }) {
     let timeUnit;
 
-    if (props.elapsed > 1) {
-        if (props.typeDate === 'd') {
+    if (userNotification.elapsed > 1) {
+        if (typeDate === 'd') {
             timeUnit = ' days';
         }
-        else if (props.typeDate === 'w') {
+        else if (typeDate === 'w') {
             timeUnit = ' weeks';
         } else {
             timeUnit = 'm';
         }
     } else {
-        if (props.typeDate === 'd') {
+        if (typeDate === 'd') {
             timeUnit = ' day';
         }
-        else if (props.typeDate === 'w') {
+        else if (typeDate === 'w') {
             timeUnit = ' week';
         } else {
             timeUnit = 'm';
@@ -24,36 +24,36 @@ function Notification(props) {
     }
 
     return (
-        <div className={`Notification d-flx${!props.read ? ' Notification-Unread' : ''}`}>
+        <div className={`Notification d-flx${!userNotification.read ? ' Notification-Unread' : ''}`}>
             <div className='AvatarContainer'>
                 <img
-                    src={props.avatar}
-                    alt={`Avatar's ${props.name}`}
+                    src={userNotification.avatar}
+                    alt={`Avatar of ${userNotification.name}`}
                     className='AvatarUser'
                 />
             </div>
             <div className='NotificationBody d-flx f-column'>
                 <div className='NotificationContent d-flx'>
                     <p>
-                        <a href="/" className='NotificationName'>{`${props.name} `}</a>
+                        <a href="/" className='NotificationName'>{`${userNotification.name} `}</a>
                         <span className='NotificationDescription'>
-                            {   props.type === 'Followed'
+                            {   userNotification.type === 'Followed'
                                 ? 'followed you '
-                                : props.type === 'Message' && !props.description
+                                : userNotification.type === 'Message' && !userNotification.description
                                 ? 'sent you a private message '
-                                : props.type === 'Picture' && !props.description
+                                : userNotification.type === 'Picture' && !userNotification.description
                                 ? 'commented on your picture '
-                                : `${props.description} `
+                                : `${userNotification.description} `
                             }
                         </span>
-                        { props.type !== 'Followed' && props.type !== 'Message' && props.type !== 'Picture' 
+                        { userNotification.type !== 'Followed' && userNotification.type !== 'Message' && userNotification.type !== 'Picture' 
                             && (
-                                <a href="/" className={`Theme${props.type === 'Group' ? ' GroupName' : ''}`}>
-                                    {props.theme}
+                                <a href="/" className={`Theme${userNotification.type === 'Group' ? ' GroupName' : ''}`}>
+                                    {userNotification.theme}
                                 </a>)
                         }
                     </p>
-                    {!props.read && (
+                    {!userNotification.read && (
                         <div className='NotificationUnread d-flx'>
                             <span>•</span>
                         </div>
@@ -61,7 +61,7 @@ function Notification(props) {
                 </div>
                 <div className='NotificationElapsedTime'>
                     <p>
-                        <span id='Elapsed'>{props.elapsed}</span>
+                        <span id='Elapsed'>{userNotification.elapsed}</span>
                         <span id='TypeDate'>{timeUnit}</span> ago
                     </p>
                 </div>
