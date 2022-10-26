@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import '../../scss/layout/NotificationsBody.scss';
 import { Notification } from '../Notification';
-import { UsersNotification } from '../UsersNotification';
+import { NotificationContext } from '../NotificationContext';
 
 function NotificationsBody() {
+    const { items: UsersNotification } = useContext(NotificationContext);
+
     return (
         <div className='Notifications d-flx f-column'>
             <Notification userNotification={UsersNotification[0]} />

@@ -1,15 +1,12 @@
 import './scss/layout/App.scss';
-import { ContainerHeader } from './components/layout/ContainerHeader';
-import { NotificationsBody } from './components/layout/NotificationsBody';
+import { AppUI } from './AppUI';
+import { NotificationProvider } from './components/NotificationContext';
 
 function App() {
     return (
-        <main id='primary-content' className='d-grd'>
-            <section className='NotificationsContainer d-grd'>
-                <ContainerHeader />
-                <NotificationsBody />
-            </section>
-        </main>
+        <NotificationProvider>
+            <AppUI />
+        </NotificationProvider>
     );
 }
 
