@@ -4,7 +4,8 @@ import { NotificationsCount } from '../NotificationsCount';
 import { NotificationContext } from '../NotificationContext';
 
 function ContainerHeader() {
-    const { unreadNotification } = useContext(NotificationContext);
+    const { unreadNotification, allNotificationsRead } =
+        useContext(NotificationContext);
 
     return (
         <div className='ContainerHeader d-flx j-between'>
@@ -12,7 +13,12 @@ function ContainerHeader() {
                 <h1 className='Title m-0'>Notifications</h1>
                 <NotificationsCount count={unreadNotification} />
             </div>
-            <button className='MarkNotifications m-0'>Mark all as read</button>
+            <button
+                className='MarkNotifications m-0'
+                onClick={allNotificationsRead}
+            >
+                Mark all as read
+            </button>
         </div>
     );
 }
