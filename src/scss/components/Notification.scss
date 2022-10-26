@@ -35,6 +35,11 @@ $black: hsl(0, 0%, 0%);
 
 .NotificationBody {
     gap: 4px;
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
 }
 
 .NotificationContent {
@@ -43,12 +48,8 @@ $black: hsl(0, 0%, 0%);
     line-height: 1.5;
     align-items: flex-start;
 
-    a {
-        color: $black;
-
-        &:hover {
-            color: var(--blue);
-        }
+    a:hover {
+        color: var(--blue);
     }
 
     .GroupName {
