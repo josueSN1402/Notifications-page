@@ -6,8 +6,7 @@ function Notification({ userNotification, typeDate }) {
     if (userNotification.elapsed > 1) {
         if (typeDate === 'd') {
             timeUnit = ' days';
-        }
-        else if (typeDate === 'w') {
+        } else if (typeDate === 'w') {
             timeUnit = ' weeks';
         } else {
             timeUnit = 'm';
@@ -15,8 +14,7 @@ function Notification({ userNotification, typeDate }) {
     } else {
         if (typeDate === 'd') {
             timeUnit = ' day';
-        }
-        else if (typeDate === 'w') {
+        } else if (typeDate === 'w') {
             timeUnit = ' week';
         } else {
             timeUnit = 'm';
@@ -24,7 +22,11 @@ function Notification({ userNotification, typeDate }) {
     }
 
     return (
-        <div className={`Notification${userNotification.type==='Picture' ? ' WithPicture':''} d-grd${!userNotification.read ? ' Notification-Unread' : ''}`}>
+        <div
+            className={`Notification${
+                userNotification.type === 'Picture' ? ' WithPicture' : ''
+            } d-grd${!userNotification.read ? ' Notification-Unread' : ''}`}
+        >
             <div className='AvatarContainer'>
                 <img
                     src={userNotification.avatar}
@@ -35,23 +37,35 @@ function Notification({ userNotification, typeDate }) {
             <div className='NotificationBody d-flx f-column'>
                 <div className='NotificationContent d-flx'>
                     <p>
-                        <a href="/" className='NotificationName'>{`${userNotification.name} `}</a>
+                        <a
+                            href='/'
+                            className='NotificationName'
+                        >{`${userNotification.name} `}</a>
                         <span className='NotificationDescription'>
-                            {   userNotification.type === 'Followed'
+                            {userNotification.type === 'Followed'
                                 ? 'followed you '
-                                : userNotification.type === 'Message' && !userNotification.description
+                                : userNotification.type === 'Message' &&
+                                  !userNotification.description
                                 ? 'sent you a private message '
-                                : userNotification.type === 'Picture' && !userNotification.description
+                                : userNotification.type === 'Picture' &&
+                                  !userNotification.description
                                 ? 'commented on your picture '
-                                : `${userNotification.description} `
-                            }
+                                : `${userNotification.description} `}
                         </span>
-                        { userNotification.type !== 'Followed' && userNotification.type !== 'Message' && userNotification.type !== 'Picture' 
-                            && (
-                                <a href="/" className={`Theme${userNotification.type === 'Group' ? ' GroupName' : ''}`}>
+                        {userNotification.type !== 'Followed' &&
+                            userNotification.type !== 'Message' &&
+                            userNotification.type !== 'Picture' && (
+                                <a
+                                    href='/'
+                                    className={`Theme${
+                                        userNotification.type === 'Group'
+                                            ? ' GroupName'
+                                            : ''
+                                    }`}
+                                >
                                     {userNotification.theme}
-                                </a>)
-                        }
+                                </a>
+                            )}
                     </p>
                     {!userNotification.read && (
                         <div className='NotificationUnread d-flx'>
@@ -65,20 +79,19 @@ function Notification({ userNotification, typeDate }) {
                         <span id='TypeDate'>{timeUnit}</span> ago
                     </p>
                 </div>
-                { userNotification.type === 'Message' &&
-                    <a href="/">
+                {userNotification.type === 'Message' && (
+                    <a href='/'>
                         <div className='NotificationMessage'>
-                                <p>{userNotification.message}</p>
+                            <p>{userNotification.message}</p>
                         </div>
                     </a>
-                }
+                )}
             </div>
-            {userNotification.type === 'Picture' 
-                &&
-                    (<a href='/' className='NotificationPicture'>
-                        <img src={userNotification.picture} alt="Posted image" />
-                    </a>)
-            }
+            {userNotification.type === 'Picture' && (
+                <a href='/' className='NotificationPicture'>
+                    <img src={userNotification.picture} alt='Posted image' />
+                </a>
+            )}
         </div>
     );
 }

@@ -3,22 +3,10 @@ import { Notification } from '../Notification';
 import { UsersNotification } from '../UsersNotification';
 
 function NotificationsBody() {
-    const notificationType = {
-        'd': 'Default',
-        'f': 'Followed',
-        'g': 'Group',
-        'm': 'Message',
-        'p': 'Picture'
-    }
-
     return (
         <div className='Notifications d-flx f-column'>
-            <Notification
-                userNotification={UsersNotification[0]}
-            />
-            <Notification
-                userNotification={UsersNotification[1]}
-            />
+            <Notification userNotification={UsersNotification[0]} />
+            <Notification userNotification={UsersNotification[1]} />
             <Notification
                 userNotification={UsersNotification[2]}
                 typeDate='d'

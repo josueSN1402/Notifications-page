@@ -7,34 +7,34 @@ import AvatarNathan from '../assets/images/avatar-nathan-peterson.webp';
 import AvatarAnna from '../assets/images/avatar-anna-kim.webp';
 
 const Users = [
-	{
-		name: 'Mark Webber',
-		avatar: AvatarMark
-	},
-	{
-		name: 'Angela Gray',
-		avatar: AvatarAngela
-	},
-	{
-		name: 'Jacob Thompson',
-		avatar: AvatarJacob
-	},
-	{
-		name: 'Rizky Hasanuddin',
-		avatar: AvatarRizky
-	},
-	{
-		name: 'Kimberly Smith',
-		avatar: AvatarKimberly
-	},
-	{
-		name: 'Nathan Peterson',
-		avatar: AvatarNathan
-	},
-	{
-		name: 'Anna Kim',
-		avatar: AvatarAnna
-	}
-]
+    {
+        name: 'Mark Webber',
+        avatar: AvatarMark,
+    },
+    {
+        name: 'Angela Gray',
+        avatar: AvatarAngela,
+    },
+    {
+        name: 'Jacob Thompson',
+        avatar: AvatarJacob,
+    },
+    {
+        name: 'Rizky Hasanuddin',
+        avatar: AvatarRizky,
+    },
+    {
+        name: 'Kimberly Smith',
+        avatar: AvatarKimberly,
+    },
+    {
+        name: 'Nathan Peterson',
+        avatar: AvatarNathan,
+    },
+    {
+        name: 'Anna Kim',
+        avatar: AvatarAnna,
+    },
+];
 
 export { Users };

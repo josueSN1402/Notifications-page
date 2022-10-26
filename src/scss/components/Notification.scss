@@ -1,4 +1,4 @@
-$black: #000000;
+$black: hsl(0, 0%, 0%);
 
 .Notification {
     align-items: flex-start;
@@ -18,7 +18,7 @@ $black: #000000;
         width: 4.5rem;
     }
 
-    &.WithPicture {        
+    &.WithPicture {
         grid-template-columns: auto 1fr auto;
     }
 
@@ -45,7 +45,7 @@ $black: #000000;
 
     a {
         color: $black;
-    
+
         &:hover {
             color: var(--blue);
         }
@@ -65,7 +65,7 @@ $black: #000000;
     color: var(--red);
     align-items: flex-end;
     padding: 0 1px 4px;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .NotificationElapsedTime {
