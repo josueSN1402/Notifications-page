@@ -1,4 +1,4 @@
-# Frontend Mentor - Notifications
+# Frontend Mentor - Notifications page
 
 This is my solution to the [Frontend Mentor "Notifications Page" challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC).
 
