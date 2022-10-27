@@ -6,7 +6,7 @@ I can see live on this [Vercel page](https://josuesn1402-notifications-page.verc
 
 ## Screenshots
 
-![Challenge finished](design/interactive-rating-component-finished.png)
+![Challenge finished](design/notifications-page-finished.png)
 
 ## Built with
 
