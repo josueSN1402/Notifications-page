@@ -75,8 +75,8 @@ function Notification({ userNotification, typeDate }) {
                 </div>
                 <div className='NotificationElapsedTime'>
                     <p>
-                        <span id='Elapsed'>{userNotification.elapsed}</span>
-                        <span id='TypeDate'>{timeUnit}</span> ago
+                        <span className='Elapsed'>{userNotification.elapsed}</span>
+                        <span className='TypeDate'>{timeUnit}</span> ago
                     </p>
                 </div>
                 {userNotification.type === 'Message' && (
