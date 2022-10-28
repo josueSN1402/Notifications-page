@@ -16,6 +16,8 @@
     font-size: 2.4rem;
     color: var(--very-dark-blue);
     margin: 0;
+    transition-property: color;
+    transition-duration: .15s;
 
     @media screen and (max-width: 1400px) {
         font-size: 2rem;

@@ -39,6 +39,8 @@ $black: hsl(0, 0%, 0%);
     a {
         color: $black;
         text-decoration: none;
+        transition-property: color;
+        transition-duration: .15s;
     }
 }
 
@@ -83,6 +85,8 @@ $black: hsl(0, 0%, 0%);
     -webkit-border-radius: 6px;
     font-weight: 300;
     line-height: 1.35;
+    transition-property: background-color;
+    transition-duration: .25s;
 
     &:hover {
         background-color: var(--light-grayish-blue-1);
