@@ -7,11 +7,11 @@ $black: hsl(0, 0%, 0%);
     box-shadow: 0px 0px 2px 1px hsla(0, 0%, 67%, 0.15);
     border-radius: 6px;
     -webkit-border-radius: 6px;
-    background-color: var(--very-light-grayish-blue);
+    background-color: var(--white);
     grid-template-columns: auto 1fr;
 
     &-Unread {
-        background-color: var(--light-grayish-blue-1);
+        background-color: var(--very-light-grayish-blue);
     }
 
     img {
